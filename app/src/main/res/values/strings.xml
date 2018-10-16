@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MilesKms2018</string>
+    <string name="toKms">To kilometers</string>
+    <string name="toMiles">To miles</string>
+</resources>
