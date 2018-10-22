@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private RadioGroup radioGroup;
+    public static final float CONVERSION_RATE = 1.60934f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 if (!editText.getText().toString().isEmpty())
                     f = Float.parseFloat(charSequence.toString());
                 if (radioGroup.getCheckedRadioButtonId() == R.id.radioButtonToKm) {
-                    float kms = f * 1.60934f;
+                    float kms = f * CONVERSION_RATE;
                     textView.setText(f + " Miles are " + kms + " Kilometers");
                 } else {
                     if (radioGroup.getCheckedRadioButtonId() == R.id.radioButtonToMiles) {
-                        float miles = f / 1.60934f;
+                        float miles = f / CONVERSION_RATE;
                         textView.setText(f + " Kilometers are " + miles + " Miles");
                     }
 
